@@ -11,6 +11,22 @@ pub fn run() {
     let permissions: u16 = 0b0110100100; // 644  rw-r--r--
 
     println!("=== Bit Ops ===");
+    println!("129 = {:08b}", 129u8);
+    println!("129 << 1 = {} ({:08b})", 129u8 << 1, 129u8 << 1);
+    println!("129.rotate_left(1) = {} ({:08b})", 129u8.rotate_left(1), 129u8.rotate_left(1));
+    println!("129 >> 1 = {} ({:08b})", 129u8 >> 1, 129u8 >> 1);
+    println!("129.rotate_right(1) = {} ({:08b})", 129u8.rotate_right(1), 129u8.rotate_right(1));
+    println!("129 & 1 = {} ({:08b})", 129u8 & 1, 129u8 & 1);
+    println!("129 | 1 = {} ({:08b})", 129u8 | 1, 129u8 | 1);
+    println!("129 ^ 1 = {} ({:08b})", 129u8 ^ 1, 129u8 ^ 1);
+    println!("129 & 2 = {} ({:08b})", 129u8 & 2, 129u8 & 2);
+    println!("129 | 2 = {} ({:08b})", 129u8 | 2, 129u8 | 2);
+    println!("129 ^ 2 = {} ({:08b})", 129u8 ^ 2, 129u8 ^ 2);
+    println!("129 & 129 = {} ({:08b})", 129u8 ^ 129, 129u8 ^ 129);
+    println!("129 | 129 = {} ({:08b})", 129u8 ^ 129, 129u8 ^ 129);
+    println!("129 ^ 129 = {} ({:08b})", 129u8 ^ 129, 129u8 ^ 129);
+    println!("!129 = {} ({:08b})", !129u8, !129u8);
+    println!("");
     println!("Permission rw-r--r-- | 644 | 110100100");
     println!("Can owner read? {}", (permissions & (read << owner)) > 0);
     println!("Can owner write? {}", (permissions & (write << owner)) > 0);
