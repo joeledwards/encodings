@@ -25,6 +25,8 @@ pub fn run() {
     let wrong_key = decipher(wrong, &cipher_text);
 
     println!("=== Simple Cipher ===");
+    println!("         key : {:02b}", key);
+    println!("       wrong : {:02b}", wrong);
     println!("    original : {:?} = '{}'", original, str::from_utf8(&original).unwrap());
     println!(" cipher text : {:?} = '{}'", cipher_text, str::from_utf8(&cipher_text).unwrap());
     println!("  plain text : {:?} = '{}'", plain_text, str::from_utf8(&plain_text).unwrap());
