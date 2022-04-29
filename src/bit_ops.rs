@@ -39,4 +39,3 @@ pub fn run() {
     println!("Can world execute? {}", (permissions & (exec << world)) > 0);
     println!("");
 }
-

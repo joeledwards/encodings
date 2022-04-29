@@ -20,8 +20,8 @@ pub fn run() {
     println!("i64 => {:016x?} ({})", signed_long, signed_long);
     println!("");
 
-    // Two's compliment
-
+    // Two's compliment (for signed integers)
+    //
     // Bits:
     // u4 0000 => 0
     // u4 0001 => 1
