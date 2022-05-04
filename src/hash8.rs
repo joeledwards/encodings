@@ -24,6 +24,14 @@ pub fn run() {
     let hash3: u8 = hash(&arr3);
     println!("hash({:?}) => {}", arr3, hash3);
 
+    let arr5: [u8; 2] = [0x07, 0x17];
+    let hash5: u8 = hash(&arr5);
+    println!("hash({:?}) => {}", arr5, hash5);
+
+    let arr6: [u8; 2] = [0x27, 0x17];
+    let hash6: u8 = hash(&arr6);
+    println!("hash({:?}) => {}", arr6, hash6);
+
     let arr4: &[u8] = "buzuli".as_bytes();
     let hash4: u8 = hash(arr4);
     println!("hash({:?}) => {}", arr4, hash4);

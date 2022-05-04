@@ -27,6 +27,11 @@ pub fn run() {
     println!("129 ^ 129 = {} ({:08b})", 129u8 ^ 129, 129u8 ^ 129);
     println!("!129 = {} ({:08b})", !129u8, !129u8);
     println!("");
+    let a: u8 = 0b00100111;
+    let b: u8 = 0b00010111;
+    let r: u8 = a ^ b;
+    println!("{:08b} ^ {:08b} = {:08b}", a, b, r);
+    println!("");
     println!("Permission rw-r--r-- | 644 | 110100100");
     println!("Can owner read? {}", (permissions & (read << owner)) > 0);
     println!("Can owner write? {}", (permissions & (write << owner)) > 0);
