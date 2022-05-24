@@ -1,10 +1,10 @@
 use hex::{encode, decode};
 
-fn hex_encode(data: &[u8]) -> String {
+pub fn hex_encode(data: &[u8]) -> String {
     encode(data)
 }
 
-fn hex_decode(data: &[u8]) -> Vec<u8> {
+pub fn hex_decode(data: &[u8]) -> Vec<u8> {
     decode(data).unwrap()
 }
 
