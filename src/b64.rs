@@ -10,7 +10,7 @@ pub fn run () {
     let c_str = std::str::from_utf8(&c).unwrap();
 
     println!("=== Base 64 ===");
-    println!("base64::encode({:?}) => \"{}\"", &a_str, &b_str);
-    println!("base64::decode({:?}) => \"{}\"", &b_str, &c_str);
+    println!("base64::encode({:?}) => \"{}\" {:?}", &a_str, &b_str, b_str.as_bytes());
+    println!("base64::decode({:?}) => \"{}\" {:?}", &b_str, &c_str, c_str.as_bytes());
     println!("");
 }

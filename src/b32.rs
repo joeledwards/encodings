@@ -9,8 +9,8 @@ fn standard_no_pad () {
     let b_str = b;
     let c_str = std::str::from_utf8(&c).unwrap();
 
-    println!("base32::encode(Alphabet::RFC4648_NOPAD, {:?}) => \"{}\"", &a_str, &b_str);
-    println!("base32::decode(Alphabet::RFC4648_NOPAD, {:?}) => \"{}\"", &b_str, &c_str);
+    println!("base32::encode(Alphabet::RFC4648_NOPAD, {:?}) => \"{}\" {:?}", &a_str, &b_str, b_str.as_bytes());
+    println!("base32::decode(Alphabet::RFC4648_NOPAD, {:?}) => \"{}\" {:?}", &b_str, &c_str, c_str.as_bytes());
 }
 
 fn standard_pad () {
@@ -22,8 +22,8 @@ fn standard_pad () {
     let b_str = b;
     let c_str = std::str::from_utf8(&c).unwrap();
 
-    println!("base32::encode(Alphabet::RFC4648_PAD, {:?}) => \"{}\"", &a_str, &b_str);
-    println!("base32::decode(Alphabet::RFC4648_PAD, {:?}) => \"{}\"", &b_str, &c_str);
+    println!("base32::encode(Alphabet::RFC4648_PAD, {:?}) => \"{}\" {:?}", &a_str, &b_str, b_str.as_bytes());
+    println!("base32::decode(Alphabet::RFC4648_PAD, {:?}) => \"{}\" {:?}", &b_str, &c_str, c_str.as_bytes());
 }
 
 fn crockford () {
@@ -35,8 +35,8 @@ fn crockford () {
     let b_str = b;
     let c_str = std::str::from_utf8(&c).unwrap();
 
-    println!("base32::encode(Alphabet::Crockford, {:?}) => \"{}\"", &a_str, &b_str);
-    println!("base32::decode(Alphabet::Crockford, {:?}) => \"{}\"", &b_str, &c_str);
+    println!("base32::encode(Alphabet::Crockford, {:?}) => \"{}\" {:?}", &a_str, &b_str, b_str.as_bytes());
+    println!("base32::decode(Alphabet::Crockford, {:?}) => \"{}\" {:?}", &b_str, &c_str, c_str.as_bytes());
 }
 
 pub fn run () {
