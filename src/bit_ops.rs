@@ -11,20 +11,40 @@ pub fn run() {
     let permissions: u16 = 0b0110100100; // 644  rw-r--r--
 
     println!("=== Bit Ops ===");
-    println!("129 = {:08b}", 129u8);
-    println!("129 << 1 = {} ({:08b})", 129u8 << 1, 129u8 << 1);
-    println!("129.rotate_left(1) = {} ({:08b})", 129u8.rotate_left(1), 129u8.rotate_left(1));
-    println!("129 >> 1 = {} ({:08b})", 129u8 >> 1, 129u8 >> 1);
+    println!(" . 129 = {:08b}", 129u8);
+    println!("");
+    println!("-- Left Shift --");
+    println!("  {} << {} = {}", 129u8, 1u8, 129u8 << 1);
+    println!("  {:08b} << {:08b} = {:08b}", 129u8, 1u8, 129u8 << 1);
+    println!("----------------");
+    println!("");
+    println!("-- Left Rotation --");
+    println!("  {}.rotate_left({}) = {}", 129u8, 1u8, 129u8.rotate_left(1));
+    println!("  {:08b}.rotate_left({:08b}) = {:08b}", 129u8, 1u8, 129u8.rotate_left(1));
+    println!("----------------");
+    println!("");
+    println!("-- Right Shift --");
+    println!("  {} >> {} = {}", 129u8, 1u8, 129u8 >> 1);
+    println!("  {:08b} >> {:08b} = {:08b}", 129u8, 1u8, 129u8 >> 1);
+    println!("----------------");
+    println!("");
     println!("129.rotate_right(1) = {} ({:08b})", 129u8.rotate_right(1), 129u8.rotate_right(1));
-    println!("129 & 1 = {} ({:08b})", 129u8 & 1, 129u8 & 1);
-    println!("129 | 1 = {} ({:08b})", 129u8 | 1, 129u8 | 1);
-    println!("129 ^ 1 = {} ({:08b})", 129u8 ^ 1, 129u8 ^ 1);
+    println!("");
+    println!("-- Bitwise AND --");
+    println!("  {} & {} = {}", 129u8, 1u8, 129u8 & 1);
+    println!("  {:08b} & {:08b} = {:08b}", 129u8, 1u8, 129u8 & 1);
     println!("129 & 2 = {} ({:08b})", 129u8 & 2, 129u8 & 2);
-    println!("129 | 2 = {} ({:08b})", 129u8 | 2, 129u8 | 2);
-    println!("129 ^ 2 = {} ({:08b})", 129u8 ^ 2, 129u8 ^ 2);
     println!("129 & 129 = {} ({:08b})", 129u8 ^ 129, 129u8 ^ 129);
+    println!("----------------");
+    println!("");
+    println!("129 | 1 = {} ({:08b})", 129u8 | 1, 129u8 | 1);
+    println!("129 | 2 = {} ({:08b})", 129u8 | 2, 129u8 | 2);
     println!("129 | 129 = {} ({:08b})", 129u8 ^ 129, 129u8 ^ 129);
+
+    println!("129 ^ 1 = {} ({:08b})", 129u8 ^ 1, 129u8 ^ 1);
+    println!("129 ^ 2 = {} ({:08b})", 129u8 ^ 2, 129u8 ^ 2);
     println!("129 ^ 129 = {} ({:08b})", 129u8 ^ 129, 129u8 ^ 129);
+
     println!("!129 = {} ({:08b})", !129u8, !129u8);
     println!("");
     let a: u8 = 0b00100111;

@@ -10,14 +10,14 @@ pub fn run() {
     let signed_long: i64 = -1;
 
     println!("=== Int Ranges ===");
-    println!("u8 => {:02x?} ({})", unsigned_byte, unsigned_byte);
-    println!("i8 => {:02x?} ({})", signed_byte, signed_byte);
-    println!("u16 => {:04x?} ({})", unsigned_short, unsigned_short);
-    println!("i16 => {:04x?} ({})", signed_short, signed_short);
-    println!("u32 => {:08x?} ({})", unsigned_int, unsigned_int);
-    println!("i32 => {:08x?} ({})", signed_int, signed_int);
-    println!("u64 => {:016x?} ({})", unsigned_long, unsigned_long);
-    println!("i64 => {:016x?} ({})", signed_long, signed_long);
+    println!("u8 => {:08b} ({})", unsigned_byte, unsigned_byte);
+    println!("i8 => {:08b} ({})", signed_byte, signed_byte);
+    println!("u16 => {:016b} ({})", unsigned_short, unsigned_short);
+    println!("i16 => {:016b} ({})", signed_short, signed_short);
+    println!("u32 => {:032b} ({})", unsigned_int, unsigned_int);
+    println!("i32 => {:032b} ({})", signed_int, signed_int);
+    println!("u64 => {:064b} ({})", unsigned_long, unsigned_long);
+    println!("i64 => {:064b} ({})", signed_long, signed_long);
     println!("");
 
     // Two's compliment (for signed integers)

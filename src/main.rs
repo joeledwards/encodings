@@ -10,8 +10,8 @@ fn main() {
     int_ranges::run();
     bit_ops::run();
     hexes::run();
-    hash8::run();
-    cipher8::run();
     b32::run();
     b64::run();
+    hash8::run();
+    cipher8::run();
 }
